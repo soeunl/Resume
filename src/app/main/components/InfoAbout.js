@@ -1,23 +1,23 @@
 import React from 'react';
 import { Section } from 'react-fullpage';
-import { FcLike } from 'react-icons/fc';
 import ProfileImage from './ProfileImage';
 import styled from 'styled-components';
+import Item from './item';
 
 const Wrapper = styled.div`
   padding-top: 51px;
-
   .inner {
     display: flex;
-
-    * {
-    width 0;
-    flex-grow: 1;
     flex-wrap: wrap;
+
+    .item {
+      width: 0;
+      flex-grow: 1;
+      margin: 20px 0;
     }
 
-    * + * {
-    margin-left: 10px;
+    .item + .item {
+      margin-left: 20px;
     }
   }
 `;
@@ -28,10 +28,8 @@ const InfoAbout = () => {
       <Wrapper>
         <ProfileImage />
         <div className="layout-width inner">
-          <h1>
-            <FcLike />
-            RESUME
-          </h1>
+          <Item title="INFO"></Item>
+          <Item title="ABOUT"></Item>
         </div>
       </Wrapper>
     </Section>

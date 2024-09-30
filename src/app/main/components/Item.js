@@ -1,25 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.dev`
-  h2 {
+const Wrapper = styled.div`
+  .item-title {
     display: flex;
     align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 25px;
 
     .tit {
       font-size: 1.4rem;
+      margin-right: 10px;
+      width: auto;
+    }
+
+    .bar {
+      flex-grow: 1;
+      height: 2px;
+      background: #bcbcbc;
     }
   }
 `;
 
-const Item = ({ childre, title }) => {
+const Item = ({ children, title }) => {
   return (
-    <Wrapper>
-      <h2>
+    <Wrapper className="item">
+      <div className="item-title">
         <div className="tit">{title}</div>
         <div className="bar"></div>
-      </h2>
-      <div className="item-content">{childre}</div>
+      </div>
+      <div className="item-content">{children}</div>
     </Wrapper>
   );
 };

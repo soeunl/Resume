@@ -17,9 +17,9 @@ const ProfileImage = ({ className }) => {
 const StyledProfileImage = styled(ProfileImage)`
   background-image: url('./images/main.jpg');
   background-repeat: no-repeat;
-  background-position: 50% 46%;
+  background-position: center;
   background-size: 100%;
-  height: 450px;
+  height: 400px;
   padding: 50px 30px 10px;
   position: relative;
 
