@@ -1,10 +1,14 @@
 import React from 'react';
 import { Section } from 'react-fullpage';
+import { FcLike } from 'react-icons/fc';
 
 const Experience = () => {
   return (
     <Section>
-      <h1>Education & Work Experience</h1>
+      <h1>
+        <FcLike />
+        Education & Work Experience
+      </h1>
     </Section>
   );
 };
